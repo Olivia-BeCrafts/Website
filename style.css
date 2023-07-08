@@ -25,8 +25,17 @@ span.name {
 img.section {
     width: 100%;
     display: block;
-    max-height: 400px;
+    max-height: 600px;
     object-fit: cover;
+    object-position: top;
+}
+
+img.smaller {
+    max-height: 200px !important;
+}
+
+img.full {
+    max-height: 800px !important;
 }
 
 header {
@@ -59,14 +68,14 @@ section {
 }
 
 section div {
-    max-width: 600px;
+    max-width: 960px;
     padding: 1em 2em 2em;
     margin: 0 auto;
 }
 
 section h2 {
     font-family:'Segoe UI Light', Tahoma, Verdana, sans-serif;
-    font-size: 2.5em;
+    font-size: 3.0em;
     font-style: italic;
     text-align: right;
     margin-top: 0;
@@ -74,6 +83,21 @@ section h2 {
 
 section p {
     text-align: justify;
+    font-size: 1.2em;
+}
+
+section img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media only screen and (width >= 750px) {
+    section img {
+        width: 50%;
+        max-width: 480px;
+        float: right;
+        margin-left: 2em;
+    }
 }
 
 section.light {

@@ -38,6 +38,11 @@ img.full {
     max-height: 800px !important;
 }
 
+img.bottom {
+    max-height: 400px !important;
+    object-position: 0 -300px !important;
+}
+
 header {
     margin: 50px auto;
     max-width: 600px;
@@ -61,6 +66,7 @@ header p {
 header p.tagline {
     font-size: 1.2em;
     font-style: italic;
+    color: #e7deed;
 }
 
 section {
@@ -125,4 +131,13 @@ footer {
 footer p {
     text-align: center;
     font-size: 1em;
+}
+
+footer p.tagline {
+    color: #e7deed;
+    font-style: italic;
+}
+
+footer p.smaller {
+    font-size: 0.8em;
 }

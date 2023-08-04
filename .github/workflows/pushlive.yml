@@ -12,5 +12,7 @@ jobs:
               with:
                 key: ${{ secrets.WEBHOST_SSHKEY }}
                 known_hosts: ${{ secrets.WEBHOST_KNOWNHOSTS }}
+            - name: Copy repo
+              uses: actions/checkout@v3
             - name: Copy to host
               run: rsync -avzn ./ ${{secrets.WEBHOST_USER}}@${{secrets.WEBHOST_DOMAIN}}:/home/${{secrets.WEBHOST_USER}}/${{secrets.WEBHOST_DOMAIN}}/ 

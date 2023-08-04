@@ -1,0 +1,14 @@
+name: push-site-to-live
+on:
+    push:
+        branches:
+            - main
+jobs:
+    copy-to-site:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Install SSH Key
+              uses: shimataro/ssh-key-action@v2
+              with:
+                key: ${{ secrets.WEBHOST_SSHKEY }}
+                known_hosts: ${{ secrets.WEBHOST_KNOWNHOSTS }}

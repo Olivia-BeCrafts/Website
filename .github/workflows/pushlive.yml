@@ -15,6 +15,6 @@ jobs:
             - name: Copy repo
               uses: actions/checkout@v3
               with:
-                sparse-checkout: !.*/*
+                sparse-checkout: public
             - name: Copy to host
-              run: rsync -avzn ./ ${{secrets.WEBHOST_USER}}@${{secrets.WEBHOST_DOMAIN}}:/home/${{secrets.WEBHOST_USER}}/${{secrets.WEBHOST_DOMAIN}}/ 
+              run: rsync -avzn ./public/ ${{secrets.WEBHOST_USER}}@${{secrets.WEBHOST_DOMAIN}}:/home/${{secrets.WEBHOST_USER}}/${{secrets.WEBHOST_DOMAIN}}/ 
